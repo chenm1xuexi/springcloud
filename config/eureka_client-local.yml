@@ -6,4 +6,4 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 test:
-  gibson: xixi
+  gibson: biubiubiu
