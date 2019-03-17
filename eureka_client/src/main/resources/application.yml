@@ -9,3 +9,11 @@ eureka:
 spring:
   application:
     name: demo-1
+  cloud:
+    config:
+      label: master
+      profile: local
+      uri: http://localhost:8888
+
+
+

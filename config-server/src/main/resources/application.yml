@@ -8,5 +8,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/chenm1xuexi/springboot.git
-          search-paths:
+          uri: https://github.com/chenm1xuexi/springcloud/ #配置仓库地址
+          search-paths: config  #配置仓库路径
+          username: chenm1xuexi  #git仓库用户名
+          password: shi8277203  #git仓库密码
+      label: master #配置仓库的分支
