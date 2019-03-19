@@ -8,12 +8,42 @@ eureka:
 
 spring:
   application:
-    name: demo-1
+    name: eureka-client
   cloud:
+    # 远程仓库配置
     config:
       label: master
       profile: local
       uri: http://localhost:8888
+      # 配置中心集群配置指定配置中心服务名
+      discovery:
+        enabled: true #从配置中心读取文件
+        serviceId: config-server #配置中心的serviceId
+
+    # 刷新配置
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: 123456
+
+  # 添加链路追踪的配置
+  zipkin:
+    base-url: http://localhost:9411
+
+# 实现配置热部署
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+
+
 
 
 

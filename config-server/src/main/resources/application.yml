@@ -13,3 +13,8 @@ spring:
           username: chenm1xuexi  #git仓库用户名
           password: shi8277203  #git仓库密码
       label: master #配置仓库的分支
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8088/eureka/

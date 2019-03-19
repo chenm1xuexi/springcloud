@@ -9,7 +9,10 @@ eureka:
 spring:
   application:
     name: service-fegin
-
+    # 添加链路追踪的配置
+    zipkin:
+      base-url: http://localhost:9411
+    # 开启远程调用熔断器
 feign:
   hystrix:
     enabled: true
