@@ -15,4 +15,9 @@ public class HelloController {
     public String hello() {
         return demoService.sayHello();
     }
+
+    @GetMapping(value = "/hi")
+    public String hello1() {
+        return "i am bibi";
+    }
 }
